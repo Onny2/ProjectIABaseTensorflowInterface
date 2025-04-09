@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffcef;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    max-width: 100%;
+    background: rgb(255,231,246);
+    background: radial-gradient(circle, rgba(255,231,246,0.9248074229691877) 0%, rgba(148,187,233,1) 100%);
+}
+h1 {
+    font-size: 2.5em;
+    color: #0073e6;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(63,206,251);
+  background: radial-gradient(circle, rgba(63,206,251,1) 0%, rgba(70,119,252,1) 100%);
+  margin: 5px;
+}
+.webcamChange{
+    background-color: yellow;
+}
+button:hover {
+  background-image: radial-gradient(circle, rgba(41,112,246,1) 0%, rgba(35,72,226,1) 100%);
+  background-size: 200% 100%;
+  background-position: 0% 100%;
+  transition: background-position 0.3s ease-in-out;
+}
+
+.webcamHover:hover{
+    background-image: radial-gradient(circle, rgba(41,112,246,1) 0%, rgba(35,72,226,1) 100%);
+  background-size: 200% 100%;
+  background-position: 0% 100%;
+  transition: background-position 0.2s ease-in-out;
+}
+
+#webcam{
+    background: radial-gradient(circle, rgba(128,151,252,0.9248074229691877) 0%, rgba(98,191,255,0.6362920168067228) 100%);
+}
+
+#webcam-container {
+  position: relative;
+  margin-top: 20px;
+  border: 2px solid #0073e6;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Stile per l'overlay della predizione principale */
+#top-prediction {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 115, 230, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  pointer-events: none; /* Permette interazioni con la webcam sottostante */
+}
+#label-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 94%;
+  padding: 0 10px;
+}
+.label {
+  padding: 10px;
+  background-color: #0073e6;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  min-width: 150px;
+  flex: 1;
+  margin: 5px;
+  max-width: 200px;
+}
+.highlight {
+  background-color: #47cc1f;
+  color: black;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  .label {
+    font-size: 0.8em;
+    margin: 2px;
+    padding: 5px;
+    min-width: 130px;
+  }
+  #top-prediction {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}
